@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, seed
 
 class Ponto:
     def __init__(self, id):
@@ -8,6 +8,10 @@ class Ponto:
         self.quantidade_de_cachorros = 0
         self.quantidade_de_ratos = 0
         self.gerar_animais()
+
+
+    def __lt__(self, other):
+        return self.id < other.id
 
 
     def presença_do_animal(self, num_sorteado):  # define se há o animal no ponto com base na chance de sua presença

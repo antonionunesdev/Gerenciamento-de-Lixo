@@ -3,7 +3,7 @@ from random import randint
 
 class Grafo:
     def __init__(self, adjacencias, aterro, zoonoses):
-        self.adjacencias = {}
+        self.adjacencias = adjacencias
         self.aterro = aterro
         self.zoonoses = zoonoses
         self.carrocinhas = []
@@ -55,7 +55,7 @@ class Grafo:
     
 
     def tem_pontos_sujos(self):
-        for ponto,  in self.adjacencias:
+        for ponto in self.adjacencias.keys():
             if ponto.quantidade_de_lixo > 0:
                 return True
         return False

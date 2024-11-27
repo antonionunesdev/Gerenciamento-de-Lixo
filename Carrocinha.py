@@ -14,32 +14,34 @@ class Carrocinha:
             self.ponto_atual.quantidade_de_cachorros, self.capacidade - self.animais_transportados
         )
         self.animais_transportados += cachorros_recolhidos
-        self.ponto_atual.quantidade_cachorros -= cachorros_recolhidos
+        self.ponto_atual.quantidade_de_cachorros -= cachorros_recolhidos
 
         gatos_recolhidos = min(
             self.ponto_atual.quantidade_de_gatos, self.capacidade - self.animais_transportados
         )
         self.animais_transportados += gatos_recolhidos
-        self.ponto_atual.quantidade__de_gatos -= gatos_recolhidos
+        self.ponto_atual.quantidade_de_gatos -= gatos_recolhidos
+        print("--------Carrocinha", self.bairro.carrocinhas.index(self), "está com", self.animais_transportados)
 
 
     def retornar_ao_centro(self):
         # é chamada exatamente quando a carrocinha fica cheia
-        tempo_de_retorno, caminho = self.bairro.djikstra(self.ponto_atual, self.bairro.zoonoses)
+        tempo_de_retorno, caminho = self.bairro.dijkstra(self.ponto_atual, self.bairro.zoonoses)
         self.tempo_gasto += tempo_de_retorno
         self.animais_transportados = 0
+        print("-----carrocinha", self.bairro.carrocinhas.index(self), "já gastou", self.tempo_gasto)
 
 
     def iniciar_rota(self, destino):
         self.disponivel = False
         # é chamada assim que se recebe um alerta de presença de animal
-        tempo_total_gasto, caminho = self.bairro.djikstra(self.ponto_atual, destino)
+        tempo_total_gasto, caminho = self.bairro.dijkstra(self.ponto_atual, destino)
         for i in range(1, len(caminho)):
             if self.animais_transportados == self.capacidade:
                 # capacidade máxima atingida durante o percurso
                 self.retornar_ao_centro()
                 break
-            for vizinho, peso in self.bairro.adjacencicas[caminho[i-1]]:
+            for vizinho, peso in self.bairro.adjacencias[caminho[i-1]]:
                 # calculando o tempo gasto de um ponto ao vizinho
                 if vizinho == caminho[i]:
                     self.tempo_gasto += peso
