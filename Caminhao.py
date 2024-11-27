@@ -1,5 +1,5 @@
 class Caminhao:
-    def __init__(self, bairro):
+    def __init__(self, bairro, num_funcionarios):
         self.bairro = bairro
         self.num_funcionarios = 0
         self.capacidade_total = 100
@@ -24,13 +24,15 @@ class Caminhao:
 
     def retornar_ao_centro(self):
         self.capacidade_restante = self.capacidade_total
+        self.tempo_gasto += self.bairro.djikstra(self.ponto_atual, self.bairro.centro)
+        self.ponto_atual = self.bairro.centro
 
 
     def sessao_de_coleta(self):
-        while self.capacidade_restante > 0 and self.bairro.tem_pontos_sujos:
+        while self.capacidade_restante > 0 and self.bairro.tem_pontos_sujos():
             self.proximo_ponto_de_coleta()
             self.coletar_lixo()
-        self.retornar()
+        self.retornar_ao_centro()
 
 
     def proximo_ponto_de_coleta(self):
@@ -39,11 +41,11 @@ class Caminhao:
             if ponto.quantidade_lixo > 0:
                 pontos_sujos.append(ponto)
 
-        min_caminho = djikstra(self.ponto_atual, pontos_sujos[0])
+        min_caminho = self.bairro.djikstra(self.ponto_atual, pontos_sujos[0])
         ponto_mais_proximo = pontos_sujos[0]
         for ponto in pontos_sujos:
-            if djikstra(self.ponto_atual, ponto) < min_caminho:
-                min_caminho = djikstra(self.ponto_atual, ponto)
+            if self.bairro.djikstra(self.ponto_atual, ponto) < min_caminho:
+                min_caminho = self.bairro.djikstra(self.ponto_atual, ponto)
                 ponto_mais_proximo = ponto
 
         self.ponto_atual = ponto_mais_proximo
@@ -55,5 +57,3 @@ class Caminhao:
 
 
         
-
-
