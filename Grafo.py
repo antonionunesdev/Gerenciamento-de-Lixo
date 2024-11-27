@@ -8,7 +8,6 @@ class Grafo:
         self.zoonoses = zoonoses
         
 
-
     def adicionar_aresta(self, origem, destino, peso):
         if origem not in self.adjacencias:
             self.adjacencias[origem] = []
@@ -16,13 +15,6 @@ class Grafo:
             self.adjacencias[destino] = []
         self.adjacencias[origem].append((destino, peso))
         self.adjacencias[destino].append((origem, peso))
-
-
-    def carregar_arquivo(self, caminho_arquivo):
-        with open(caminho_arquivo, 'r') as arquivo:
-            for linha in arquivo:
-                origem, destino, peso = map(int, linha.strip().split())
-                self.adicionar_aresta(origem, destino, peso)
 
 
     def dijkstra(self, origem, destino):
