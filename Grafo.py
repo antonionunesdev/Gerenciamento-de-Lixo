@@ -6,6 +6,8 @@ class Grafo:
         self.adjacencias = {}
         self.aterro = aterro
         self.zoonoses = zoonoses
+        self.carrocinhas = []
+        self.caminhoes = []
         
 
     def adicionar_aresta(self, origem, destino, peso):

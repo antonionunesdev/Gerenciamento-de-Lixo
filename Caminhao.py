@@ -9,6 +9,10 @@ class Caminhao:
 
 
     def coletar_lixo(self):
+        if self.ponto_atual.quantidade_de_ratos > 0 or self.ponto_atual.quantidade_de_gatos > 0 or self.ponto_atual.quantidade_de_cachorros > 0:
+            lixo_espalhado = True
+            self.solicitar_carrocinha()
+            
         if self.capacidade_restante >= self.ponto_atual.quantidade_lixo: 
             tempo = self.ponto_atual.quantidade_lixo / self.num_funcionarios
             self.capacidade_restante -= self.ponto_atual.quantidade_lixo
@@ -17,7 +21,7 @@ class Caminhao:
             tempo = self.capacidade_restante / self.num_funcionarios
             self.capacidade_restante = 0
             self.ponto_atual.quantidade_lixo -= self.capacidade_restante
-        if self.ponto_atual.lixo_espalhado:
+        if lixo_espalhado:
             tempo *= 2
         self.tempo_gasto += tempo
         
@@ -50,6 +54,13 @@ class Caminhao:
 
         self.ponto_atual = ponto_mais_proximo
         self.tempo_gasto += min_caminho
+
+
+    def solicitar_carrocinha(self):
+        for carrocinha in self.bairro.carrocinhas:
+            if carrocinha.disponivel:
+                carrocinha.iniciar_rota(self.ponto_atual)
+                return
 
         
 

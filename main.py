@@ -19,5 +19,24 @@ if dados:
     print("Aterro sanitário:", bairro.aterro.id)
     print("Centro de zoonoses:", bairro.zoonoses.id)
 
-    
+
+    # programa principal
+
+    TEMPO_MAXIMO = 8*60 # consideramos nossa unidade de tempo em minutos
+
+    carrocinhaScoobyDoo = Carrocinha(bairro)
+    carrocinhaBolt = Carrocinha(bairro)
+    carrocinhaBidu = Carrocinha(bairro)
+    bairro.carrocinhas = [carrocinhaScoobyDoo, carrocinhaBolt, carrocinhaBidu]
+
+    while True:
+        
+
+
+
+        for carrocinha in bairro.carrocinhas:
+            carrocinha.disponivel = True
+
+
+
 

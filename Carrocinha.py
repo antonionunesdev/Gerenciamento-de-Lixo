@@ -5,6 +5,7 @@ class Carrocinha:
         self.animais_transportados = 0
         self.tempo_gasto = 0
         self.ponto_atual = self.bairro.zoonoses
+        self.disponivel = True
 
     def recolher_animais(self):
         # calcula para cachorros e gatos, a possibilidade de se transportar todos os presentes
@@ -30,6 +31,7 @@ class Carrocinha:
 
 
     def iniciar_rota(self, destino):
+        self.disponivel = False
         # é chamada assim que se recebe um alerta de presença de animal
         tempo_total_gasto, caminho = self.bairro.djikstra(self.ponto_atual, destino)
         for i in range(1, len(caminho)):
