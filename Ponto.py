@@ -23,9 +23,3 @@ class Ponto:
         self.quantidade_de_ratos = self.presença_do_animal(randint(0,1))
         self.quantidade_de_gatos = self.presença_do_animal(randint(0,3))
         self.quantidade_de_cachorros = self.presença_do_animal(randint(0, 9))
-
-
-    
-
-
-    

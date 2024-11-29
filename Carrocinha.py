@@ -7,6 +7,7 @@ class Carrocinha:
         self.ponto_atual = self.bairro.zoonoses
         self.disponivel = True
 
+
     def recolher_animais(self):
         # calcula para cachorros e gatos, a possibilidade de se transportar todos os presentes
         # no local, ou se alguns deles já enchem a carrocinha.
@@ -21,7 +22,7 @@ class Carrocinha:
         )
         self.animais_transportados += gatos_recolhidos
         self.ponto_atual.quantidade_de_gatos -= gatos_recolhidos
-        print("--------Carrocinha", self.bairro.carrocinhas.index(self), "está com", self.animais_transportados)
+        print("--- Carrocinha", self.bairro.carrocinhas.index(self), "está com", self.animais_transportados, "animais.")
 
 
     def retornar_ao_centro(self):
@@ -29,7 +30,7 @@ class Carrocinha:
         tempo_de_retorno, caminho = self.bairro.dijkstra(self.ponto_atual, self.bairro.zoonoses)
         self.tempo_gasto += tempo_de_retorno
         self.animais_transportados = 0
-        print("-----carrocinha", self.bairro.carrocinhas.index(self), "já gastou", self.tempo_gasto)
+        print("--- Carrocinha", self.bairro.carrocinhas.index(self), "já gastou", self.tempo_gasto, "minutos.")
 
 
     def iniciar_rota(self, destino):

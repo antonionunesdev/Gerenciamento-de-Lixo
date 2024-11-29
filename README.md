@@ -1,7 +1,7 @@
 # 🗑 Gerenciamento de Lixo
 
 ## Descrição
-Este projeto, desenvolvido como parte da disciplina "Algoritmos em Grafos", ministrada pelo professor Carlos Vinícius, na Universidade Federal do Cariri, é uma simulação da resolução de um problema envolvendo o gerenciamento de lixo de um bairro. Matheus ficou responsável pela implementação das classes Ponto e Grafo, José Vitor pelas classes Carrocinha e Caminhão, Valney pela classe Main, e Antonio pela classe leitura_dados e pelo arquivo de entrada, apesar de todos os desenvolvedores terem participado ativamente do desenvolvimento de cada classe.
+Este projeto, desenvolvido como parte da disciplina "Algoritmos em Grafos", ministrada pelo professor Carlos Vinícius, na Universidade Federal do Cariri, é uma simulação da resolução de um problema envolvendo o gerenciamento de lixo de um bairro. Matheus ficou responsável pela implementação da classe Main, José Vitor pelas classes Carrocinha e Caminhão, Valney pelas classes Ponto e Grafo, e Antonio pela classe leitura_dados e pelo arquivo de entrada "entrada.txt", apesar de todos os desenvolvedores terem participado ativamente do desenvolvimento de cada classe.
 
 ## Tecnologia
 
@@ -17,9 +17,9 @@ Indicar os números mínimos de carros de lixo e funcionários necessários para
 **Desenvolvedores:**
 </br>
 
-[<img src="https://github.com/antonionunesdev.png" width="60px;">](https://github.com/antonionunesdev)
 [<img src="https://github.com/matheusluna37.png" width="60px;">](https://github.com/matheusluna37)
 [<img src="https://github.com/josevitordds.png" width="60px;">](https://github.com/josevitordds)
+[<img src="https://github.com/antonionunesdev.png" width="60px;">](https://github.com/antonionunesdev)
 [<img src="https://github.com/valneymaia.png" width="60px;">](https://github.com/valneymaia)
 </br>
 
@@ -27,7 +27,7 @@ Indicar os números mínimos de carros de lixo e funcionários necessários para
 **Instituição:** [Universidade Federal do Cariri](https://www.ufca.edu.br)
 
 ## Suporte/Contato
-Para suporte, entre em contato com Antonio Nunes em antonio.nunes@aluno.ufca.edu.br
+Para suporte, entre em contato com Matheus Bezerra em matheus.bezerra@aluno.ufca.edu.br
 
 ## Agradecimentos
 Ao nosso professor Carlos Vinícius pela ótima proposta de projeto, instigando maior entedimento do conteúdo trabalhado em sala de aula.
