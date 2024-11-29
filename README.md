@@ -17,9 +17,9 @@ Indicar os números mínimos de carros de lixo e funcionários necessários para
 **Desenvolvedores:**
 </br>
 
+[<img src="https://github.com/antonionunesdev.png" width="60px;">](https://github.com/antonionunesdev)
 [<img src="https://github.com/matheusluna37.png" width="60px;">](https://github.com/matheusluna37)
 [<img src="https://github.com/josevitordds.png" width="60px;">](https://github.com/josevitordds)
-[<img src="https://github.com/antonionunesdev.png" width="60px;">](https://github.com/antonionunesdev)
 [<img src="https://github.com/valneymaia.png" width="60px;">](https://github.com/valneymaia)
 </br>
 
@@ -27,7 +27,7 @@ Indicar os números mínimos de carros de lixo e funcionários necessários para
 **Instituição:** [Universidade Federal do Cariri](https://www.ufca.edu.br)
 
 ## Suporte/Contato
-Para suporte, entre em contato com Matheus Bezerra em matheus.bezerra@aluno.ufca.edu.br
+Para suporte, entre em contato com Antonio Nunes em antonio.nunes@aluno.ufca.edu.br
 
 ## Agradecimentos
 Ao nosso professor Carlos Vinícius pela ótima proposta de projeto, instigando maior entedimento do conteúdo trabalhado em sala de aula.
